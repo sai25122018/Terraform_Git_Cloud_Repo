@@ -5,7 +5,7 @@ resource "aws_instance" "aws-instance-east-1" {
   key_name               = "Provisioner_Key"
   subnet_id              = aws_subnet.aws-subnet1-east-1.id
   vpc_security_group_ids = [aws_security_group.aws-SG-east-1.id]
-  count                  = 1
+  count                  = 2
   user_data              = <<EOF
 		sudo yum update -y
 		sudo amazon-linux-extras install nginx1
